@@ -10,6 +10,8 @@ app.get('/health', (req, res) => {
   res.send("All good!");
 });
 
+app.use(express.static('public'))
+
 app.use('/api', routes);
 
 app.listen(7890, () => console.log("Server started at 7890"));
